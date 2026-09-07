@@ -5,21 +5,21 @@
 class OpergoMcp < Formula
   desc "MCP server exposing the opergo API to Claude and other MCP clients"
   homepage "https://github.com/Proveder/mcp"
-  version "0.0.7"
+  version "0.1.0"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Proveder/mcp-dist/releases/download/v0.0.7/opergo-mcp_0.0.7_darwin_amd64.tar.gz"
-      sha256 "92627da1643b37bd29476145090224117465a18d1d112e1fcc7f308f644a7a4b"
+      url "https://github.com/Proveder/mcp-dist/releases/download/v0.1.0/opergo-mcp_0.1.0_darwin_amd64.tar.gz"
+      sha256 "a4022c5e70d7ae86957899ebea54e27dba4b1757ae4f489c06fa29981dff5172"
 
       define_method(:install) do
         bin.install "opergo-mcp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Proveder/mcp-dist/releases/download/v0.0.7/opergo-mcp_0.0.7_darwin_arm64.tar.gz"
-      sha256 "31bb591db88e1567f548f7f1fd88ca7eb48f9c61f3a85c9cbf862496d5df2b94"
+      url "https://github.com/Proveder/mcp-dist/releases/download/v0.1.0/opergo-mcp_0.1.0_darwin_arm64.tar.gz"
+      sha256 "e40b784d43584e1e676506743bb70948a0b2c9ac469f02fef97b0d23f078166d"
 
       define_method(:install) do
         bin.install "opergo-mcp"
@@ -29,15 +29,15 @@ class OpergoMcp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Proveder/mcp-dist/releases/download/v0.0.7/opergo-mcp_0.0.7_linux_amd64.tar.gz"
-      sha256 "2ef5b351aca57d9b8698331c88fe8d9a57baf976f9630ec7d0a1377542d80461"
+      url "https://github.com/Proveder/mcp-dist/releases/download/v0.1.0/opergo-mcp_0.1.0_linux_amd64.tar.gz"
+      sha256 "bfd06ee8943f7a0cae384b81b4e84ef7f092512bcb2f7e32673924d7e84d3bd5"
       define_method(:install) do
         bin.install "opergo-mcp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Proveder/mcp-dist/releases/download/v0.0.7/opergo-mcp_0.0.7_linux_arm64.tar.gz"
-      sha256 "0aa734401ffe32d956729a9f044d860381d9a9b1fe77d9441749d5b4e20e6bc4"
+      url "https://github.com/Proveder/mcp-dist/releases/download/v0.1.0/opergo-mcp_0.1.0_linux_arm64.tar.gz"
+      sha256 "789c41e576a3a53d61509b831136067a6a3859bc9970b489800e047ed0b0ebaa"
       define_method(:install) do
         bin.install "opergo-mcp"
       end
